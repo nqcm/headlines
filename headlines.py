@@ -55,6 +55,7 @@ def home():
                                              currency_from=currency_from,
                                              currency_to=currency_to,
                                              rate=rate,
+                                             publication=publication.upper(),
                                              currencies=sorted(currencies)))
     expires = datetime.datetime.now() + datetime.timedelta(days=365)
     response.set_cookie("publication", publication, expires=expires)
